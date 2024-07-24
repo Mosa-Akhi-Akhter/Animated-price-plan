@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: montserrat; 
+    background: #000;
+}
+
+.price-area{
+    width: 80%;
+    text-align: center;
+    margin: 3% auto;
+}
+
+.section-header h2 {
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    margin: 0;
+  }
+.section-header h2 span{
+    color: #00f6eb;
+}
+
+  .section-header p {
+    color: #fff;
+  }
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.deals{
+    position: relative;
+	background: #000;
+	overflow: hidden;
+	text-align: center;
+    margin: 0;
+    padding: 0;
+	height: 450px;
+	font-size: 1.3em;
+	font-weight: 700;
+	cursor: pointer;
+	color: #fff;
+	z-index: 0;
+	border: 1px solid #00f6eb;
+	line-height: 60px;
+	border-radius: 50px;
+}
+.deals li{
+    list-style: none;
+    padding: 6px;
+	text-align: center;
+	color: #fff;
+	font-weight: 500;
+    transition: all .6s ease;
+}
+.deals .plans{
+    color: #00f6eb;
+    font-size: 40px;
+    font-family: impact;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+button{
+    background-color: #00f6eb;
+    border: none;
+    border-radius: 25px;
+    color: #282828;
+    cursor: pointer;
+    padding: 12px 70px;
+    font-size: 16px;
+}
+.deals:before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00f6eb;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+    transition: all .9s;
+}
+.deals:hover:before{
+    top: 0;
+    border-radius: 0;
+}
+.deals:hover li{
+    color: #262626;
+}
+.deals:hover button{
+    background: #fff;
+}
+
+@media (max-width: 500px){
+    .price-area{
+        width: 100%;
+        margin: 1% auto;
+    }
+}
